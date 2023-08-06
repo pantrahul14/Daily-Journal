@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Daily Journal</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header"><a href="/">
+        <p class="navbar-brand">DAILY JOURNAL</p>
+        </a>
+      </div>
+        <ul class="nav navbar-nav navbar-right">
+          <!-- 6 -->
+          <li id="home"><a href="/">HOME</a></li>
+          <li id="contact"><a href="/compose">COMPOSE</a></li>
+          <li id="about"><a href="/about">ABOUT US</a></li>
+          <li id="contact"><a href="/contact">CONTACT US</a></li>
+        </ul>
+    </div>
+  </nav>
+
+  <body style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+      
+    <div class="container">
+<h1 style="font-size:60px">Home</h1>
+
+<header style="font-size:40px">
+  <h1 style="font-size:40px">Welcome to Your Daily Journal</h1>
+  <p>Unleash the Power of Self-Reflection and Growth</p>
+</header>
+<main style="font-size:30px">
+  <section>
+      <em>Embrace Each Day with Purpose</em>
+      <p>Welcome to Your Daily Journal, your personal haven for self-discovery, introspection, and personal growth. We believe that each day offers us an opportunity to learn, evolve, and embrace the beauty of life. Our mission is to empower you to embark on a journey of self-awareness, mindfulness, and positive transformation through the power of daily journaling.</p>
+  
+</main>
+
+
+<% posts.forEach(function(post){ %>
+  <h1><%=post.title%></h1>
+  <p><%=post.body.substring(0,100)+' ... '%><a href="/posts/<%= post.title %>">Read More</a></p>
+
+<% }); %>
+
+
+    </div>
+    </div>
+
+
+
+
+<%- include("partials/footer") -%>
